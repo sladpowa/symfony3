@@ -1,0 +1,13 @@
+{% block subject %}Confirmation d'inscription au site Qiwogame.com{% endblock %}
+
+{% block body %}
+    {% autoescape false %}
+
+    Bonjour {{ user.username }} !
+
+    Ce mail confirme votre inscription sur le site <a>https://qiwo_indie_games.com</a>
+
+    Amicalement : Michel Michael
+
+    {% endautoescape %}
+{% endblock %}

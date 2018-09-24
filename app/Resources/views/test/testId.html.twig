@@ -1,0 +1,35 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-sm-3 left-menu-container slideInLeft">
+            {% include 'includes/leftmenu.html.twig' %}
+        </div>
+        <div class="col-sm-9 right-menu-container-80" id="right-menu-container">
+            <h2 class="h2-titre">Résultat du formulaire</h2>
+            <div>
+                {{ upload.title }}
+            </div>
+            <div>
+                {{ upload.content }}
+            </div>
+            <div>
+                {{ upload.image }}
+            </div>
+            <div>
+                {{ upload.link }}
+            </div>
+            <div>
+                {{ upload.download }}
+            </div>
+            <div>
+                {{ upload.file }}
+            </div>
+            <div class="col-12">
+                {% include '@FOSComment/Thread/async.html.twig' with {'id': 'foo'} %}
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

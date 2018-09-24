@@ -1,0 +1,39 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-sm-3 left-menu-container slideInLeft">
+            {% include 'includes/leftmenu.html.twig' %}
+        </div>
+        <div class="col-sm-9 right-menu-container-80" id="right-menu-container">
+            <h1 class="h1-titre">DÉTAIL DU JEUX : {{ game.title }}</h1>
+
+            <table class="table table-striped animated slideInRight">
+                <tbody>
+
+                    <tr>
+                        <th>Catégorie:</th>
+                        <td>{{ game.category.type }}</td>
+                    </tr>
+                    <tr>
+                        <th>Image:</th>
+                        <td><img src="{{ game.image }}" alt="" title="Supa Sword masta"/> </td>
+                    </tr>
+                    <tr>
+                        <th>Description:</th>
+                        <td>{{ game.content }}</td>
+                    </tr>
+                    <tr>
+                        <th>Date:</th>
+                        <td>{% if game.createdAt %}{{ game.createdAt|date('d-m-Y à H:i:s') }}{% endif %}</td>
+                    </tr>
+                </tbody>
+            </table>
+            <a class="btn btn-outline-success" href="../../webgl/index.html">JOUER</a>
+            <a class="btn btn-outline-warning" href="{{ path('games_index') }}">Retour à la liste des jeux</a>
+
+        </div>
+    </div>
+</div>
+{% endblock %}

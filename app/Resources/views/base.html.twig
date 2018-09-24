@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title %}Qiwo-Games{% endblock %}</title>
+    {% block stylesheets %}
+        <link rel="stylesheet" href="{{ asset('css/bootwatchsolar.css') }}">
+        <link rel="stylesheet" href="{{ asset('css/all.css') }}">
+        <link rel="stylesheet" type="text/css" href="{{ asset('css/cookieBar.css') }}" />
+        <link rel="stylesheet" type="text/css" href="{{ asset('css/styles.css') }}" />
+        <link rel="stylesheet" type="text/css" href="{{ asset('css/animates.css') }}"/>
+    {% endblock %}
+</head>
+<header>
+    {% block navbar %}
+        <div class="cookie-message">
+            Ce site utilise des cookies relative a loi Européenne RGDP <a class="my-close-button btn btn-outline-warning" href>Accepter</a>
+        </div>
+        {% include 'includes/navbar.html.twig' %}
+    {% endblock %}
+</header>
+<body>
+
+{% block body %}
+
+
+{% endblock %}
+{% block javascripts %}
+    <script src="{{ asset('js/jquery3.3.1.js') }}"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" ></script>
+    <script src="{{ asset('js/bootstrap.js') }}"></script>
+    <script src="{{ asset('js/jquery.cookieBar.min.js') }}"></script>
+    <script src="{{ asset('js/app.js') }}"></script>
+    <script>
+        $(document).ready(function () {
+            var js = new JS();
+        });
+    </script>
+{% endblock %}
+</body>
+</html>

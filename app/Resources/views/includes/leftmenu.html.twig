@@ -1,0 +1,42 @@
+<nav class="nav flex-column nav-list">
+    <div class="left-menu-element active">
+        <i class="fas fa-home fa-3x"></i>
+        <a class="nav-link link-element" href="{{ path('homepage') }}">ACCUEIL</a>
+    </div>
+
+    <div class="left-menu-element">
+        <i class="fas fa-gamepad fa-3x"></i>
+        <a class="nav-link link-element" href="{{ path('games_index') }}">JEUX</a>
+    </div>
+
+    <div class="left-menu-element">
+        <i class="fas fa-wrench fa-3x"></i>
+        <a class="nav-link link-element" href="{{ path('tools_show') }}">OUTILS</a>
+    </div>
+
+    <div class="left-menu-element">
+        <i class="fas fa-plug fa-3x"></i>
+        <a class="nav-link link-element" href="{{ path('fos_user_security_login') }}">CONNEXION</a>
+    </div>
+
+    <div class="left-menu-element">
+        <i class="fas fa-registered fa-3x"></i>
+        <a class="nav-link link-element" href="{{ path('fos_user_registration_register') }}">INSCRIPTION</a>
+    </div>
+
+    <div class="left-menu-element">
+        <i class="fas fa-lock fa-3x"></i>
+        <a class="nav-link link-element" href="{{ path('admin') }}">ADMINISTRATION</a>
+    </div>
+
+    <div class="left-menu-element" style="color: darkred;">
+        <i class="fas fa-vial fa-3x"></i>
+        <a class="nav-link link-element" href="{{ path('test') }}">DIVERS TEST</a>
+    </div>
+
+    <div class="left-menu-element-end">
+
+    </div>
+
+
+</nav>
