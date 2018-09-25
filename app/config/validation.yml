@@ -1,5 +1,0 @@
-AppBundle\Entity\Upload:
-    properties:
-        file:
-            - File:
-                maxSize: 6000000

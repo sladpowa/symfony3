@@ -1,0 +1,3 @@
+Test email => Gmail
+
+Activer lessSecure : https://myaccount.google.com/lesssecureapps
